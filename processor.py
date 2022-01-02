@@ -38,11 +38,11 @@ class DataProcessor:
         df_soukr = modify_values(raw_df_soukr)
 
         # ciselnik stazen z https://www.czso.cz
-        ciselnik = pd.read_csv('data/ciselnik_uzemi_CR_1_1_2021.csv')
+        ciselnik = pd.read_csv('data_final/ciselnik_uzemi_CR_1_1_2021.csv')
         df = ciselnik.iloc[:, :2] # začátek datasetu
 
         # data z https://www.rozpocetobce.cz
-        coords = pd.read_csv('data/coords.csv')
+        coords = pd.read_csv('data_final/coords.csv')
 
         # nalezneme chybné řádky a smažeme:
         # for i, mun in enumerate(coords['OBEC_CSU_KOD']):
